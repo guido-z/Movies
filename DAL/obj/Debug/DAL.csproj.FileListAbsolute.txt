@@ -1,0 +1,9 @@
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DAL\bin\Debug\DAL.dll
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DAL\bin\Debug\DAL.pdb
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DAL\bin\Debug\DB.dll
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DAL\bin\Debug\DB.pdb
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DAL\obj\Debug\DAL.dll
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DAL\obj\Debug\DAL.pdb

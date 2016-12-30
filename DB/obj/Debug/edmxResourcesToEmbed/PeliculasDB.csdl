@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PeliculasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Funcionalidad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Controlador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Rols" Relationship="Self.FuncionalidadXRol" FromRole="Funcionalidad" ToRole="Rol" />
+  </EntityType>
+  <EntityType Name="LoginUsuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdUsuario" Type="Int32" />
+    <Property Name="IdRol" Type="Int32" />
+    <NavigationProperty Name="Rol" Relationship="Self.FK__LoginUsua__IdRol__182C9B23" FromRole="LoginUsuario" ToRole="Rol" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__LoginUsua__IdUsu__173876EA" FromRole="LoginUsuario" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="LoginUsuarios" Relationship="Self.FK__LoginUsua__IdRol__182C9B23" FromRole="Rol" ToRole="LoginUsuario" />
+    <NavigationProperty Name="Funcionalidads" Relationship="Self.FuncionalidadXRol" FromRole="Rol" ToRole="Funcionalidad" />
+  </EntityType>
+  <EntityType Name="TipoDocumento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuario__TipoDoc__1273C1CD" FromRole="TipoDocumento" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telefono" Type="Int32" Nullable="false" />
+    <Property Name="TipoDocumento" Type="Int32" />
+    <NavigationProperty Name="LoginUsuarios" Relationship="Self.FK__LoginUsua__IdUsu__173876EA" FromRole="Usuario" ToRole="LoginUsuario" />
+    <NavigationProperty Name="TipoDocumento1" Relationship="Self.FK__Usuario__TipoDoc__1273C1CD" FromRole="Usuario" ToRole="TipoDocumento" />
+  </EntityType>
+  <Association Name="FK__LoginUsua__IdRol__182C9B23">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+    <End Role="LoginUsuario" Type="Self.LoginUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LoginUsuario">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LoginUsua__IdUsu__173876EA">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="LoginUsuario" Type="Self.LoginUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LoginUsuario">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__TipoDoc__1273C1CD">
+    <End Role="TipoDocumento" Type="Self.TipoDocumento" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumento">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="TipoDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FuncionalidadXRol">
+    <End Role="Funcionalidad" Type="Self.Funcionalidad" Multiplicity="*" />
+    <End Role="Rol" Type="Self.Rol" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="PeliculasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Funcionalidads" EntityType="Self.Funcionalidad" />
+    <EntitySet Name="LoginUsuarios" EntityType="Self.LoginUsuario" />
+    <EntitySet Name="Rols" EntityType="Self.Rol" />
+    <EntitySet Name="TipoDocumentoes" EntityType="Self.TipoDocumento" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuario" />
+    <AssociationSet Name="FK__LoginUsua__IdRol__182C9B23" Association="Self.FK__LoginUsua__IdRol__182C9B23">
+      <End Role="Rol" EntitySet="Rols" />
+      <End Role="LoginUsuario" EntitySet="LoginUsuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoginUsua__IdUsu__173876EA" Association="Self.FK__LoginUsua__IdUsu__173876EA">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="LoginUsuario" EntitySet="LoginUsuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__TipoDoc__1273C1CD" Association="Self.FK__Usuario__TipoDoc__1273C1CD">
+      <End Role="TipoDocumento" EntitySet="TipoDocumentoes" />
+      <End Role="Usuario" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FuncionalidadXRol" Association="Self.FuncionalidadXRol">
+      <End Role="Funcionalidad" EntitySet="Funcionalidads" />
+      <End Role="Rol" EntitySet="Rols" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

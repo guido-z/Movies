@@ -1,0 +1,10 @@
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DB\bin\Debug\DB.dll.config
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DB\bin\Debug\DB.dll
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DB\bin\Debug\DB.pdb
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DB\bin\Debug\EntityFramework.dll
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DB\bin\Debug\EntityFramework.xml
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DB\obj\Debug\DB.csprojResolveAssemblyReference.cache
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DB\obj\Debug\DB.dll
+C:\Users\Guido\Documents\Visual Studio 2015\Projects\Movies\DB\obj\Debug\DB.pdb
