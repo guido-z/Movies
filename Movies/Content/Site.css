@@ -27,7 +27,7 @@ textarea {
 
 input[type="text"], input[type="password"] {
     border: none;
-    border-bottom: 1px solid white;
+    /*border-bottom: 1px solid white;*/
     border-radius: 0;
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
@@ -44,12 +44,22 @@ input.form-control.transparent::-webkit-input-placeholder {
     color: white;
 }
 
+.formItem {
+    margin-bottom: 0;
+}
+
 .button {
-    margin-top: 20px;
+    margin-top: 0px;
     background: none !important;
     border: none;    
     font-weight: bold;
-}.center {
+}
+
+.center {
     max-width: 280px;
     margin: 0 auto;
-}
+}
+
+hr {
+    margin: 5px 0 20px 0;
+}
