@@ -13,10 +13,10 @@ namespace DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PeliculasEntities : DbContext
+    public partial class PeliculasEntities1 : DbContext
     {
-        public PeliculasEntities()
-            : base("name=PeliculasEntities")
+        public PeliculasEntities1()
+            : base("name=PeliculasEntities1")
         {
         }
     

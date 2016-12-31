@@ -25,6 +25,8 @@ namespace DB
         public string Apellido { get; set; }
         public int Telefono { get; set; }
         public Nullable<int> TipoDocumento { get; set; }
+        public string NumeroDocumento { get; set; }
+        public string Email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LoginUsuario> LoginUsuarios { get; set; }

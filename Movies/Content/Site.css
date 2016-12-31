@@ -25,13 +25,22 @@ textarea {
     max-width: 280px;    
 }
 
-input[type="text"], input[type="password"] {
+a, a:hover, a:active {
+    color: white;
+    text-decoration: none;    
+}
+
+input[type="text"], input[type="password"], select {
     border: none;
     /*border-bottom: 1px solid white;*/
     border-radius: 0;
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;    
+}
+
+option {
+    background-color: rgb(0, 120, 215);
 }
 
 .transparent {
@@ -50,6 +59,7 @@ input.form-control.transparent::-webkit-input-placeholder {
 
 .button {
     margin-top: 0px;
+    padding-left: 0;
     background: none !important;
     border: none;    
     font-weight: bold;
@@ -60,6 +70,14 @@ input.form-control.transparent::-webkit-input-placeholder {
     margin: 0 auto;
 }
 
+.labeledForm {
+    max-width: 60%;
+}
+
 hr {
     margin: 5px 0 20px 0;
+}
+
+.white {
+    color: white;
 }

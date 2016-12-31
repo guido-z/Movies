@@ -49,6 +49,8 @@
     <Property Name="Apellido" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Telefono" Type="int" Nullable="false" />
     <Property Name="TipoDocumento" Type="int" />
+    <Property Name="NumeroDocumento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <Association Name="FK__Funcional__IdFun__1DE57479">
     <End Role="Funcionalidad" Type="Self.Funcionalidad" Multiplicity="1" />

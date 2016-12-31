@@ -54,6 +54,8 @@
           <Property Name="Apellido" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Telefono" Type="int" Nullable="false" />
           <Property Name="TipoDocumento" Type="int" />
+          <Property Name="NumeroDocumento" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <Association Name="FK__Funcional__IdFun__1DE57479">
           <End Role="Funcionalidad" Type="Self.Funcionalidad" Multiplicity="1" />
@@ -195,6 +197,8 @@
           <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Telefono" Type="Int32" Nullable="false" />
           <Property Name="TipoDocumento" Type="Int32" />
+          <Property Name="NumeroDocumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="LoginUsuarios" Relationship="Self.FK__LoginUsua__IdUsu__173876EA" FromRole="Usuario" ToRole="LoginUsuario" />
           <NavigationProperty Name="TipoDocumento1" Relationship="Self.FK__Usuario__TipoDoc__1273C1CD" FromRole="Usuario" ToRole="TipoDocumento" />
         </EntityType>
@@ -238,7 +242,7 @@
           <End Role="Funcionalidad" Type="Self.Funcionalidad" Multiplicity="*" />
           <End Role="Rol" Type="Self.Rol" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="PeliculasEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PeliculasEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Funcionalidads" EntityType="Self.Funcionalidad" />
           <EntitySet Name="LoginUsuarios" EntityType="Self.LoginUsuario" />
           <EntitySet Name="Rols" EntityType="Self.Rol" />
@@ -266,7 +270,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PeliculasModelStoreContainer" CdmEntityContainer="PeliculasEntities">
+        <EntityContainerMapping StorageEntityContainer="PeliculasModelStoreContainer" CdmEntityContainer="PeliculasEntities1">
           <EntitySetMapping Name="Funcionalidads">
             <EntityTypeMapping TypeName="PeliculasModel.Funcionalidad">
               <MappingFragment StoreEntitySet="Funcionalidad">
@@ -311,6 +315,8 @@
                 <ScalarProperty Name="Apellido" ColumnName="Apellido" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
                 <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+                <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

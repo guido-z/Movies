@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="05ce4e4ef46e43c5b31b4607ea3e6582" Name="Diagram1">
-        <EntityTypeShape EntityType="PeliculasModel.Funcionalidad" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="PeliculasModel.LoginUsuario" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="PeliculasModel.Rol" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="PeliculasModel.TipoDocumento" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+      <Diagram DiagramId="d0774949de3443228b85dd5ff9787713" Name="Diagram1">
+        <EntityTypeShape EntityType="PeliculasModel.Funcionalidad" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PeliculasModel.LoginUsuario" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PeliculasModel.Rol" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PeliculasModel.TipoDocumento" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PeliculasModel.Usuario" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="PeliculasModel.FK__LoginUsua__IdRol__182C9B23" ManuallyRouted="false" />
         <AssociationConnector Association="PeliculasModel.FK__LoginUsua__IdUsu__173876EA" ManuallyRouted="false" />
