@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: rgb(0, 120, 215);
+    color: white;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -19,6 +21,35 @@
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
-textarea {
-    max-width: 280px;
+textarea {    
+    max-width: 280px;    
 }
+
+input[type="text"], input[type="password"] {
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;    
+}
+
+.transparent {
+    outline: none;
+    color: white !important;
+    background-color: transparent;    
+}
+
+input.form-control.transparent::-webkit-input-placeholder {
+    color: white;
+}
+
+.button {
+    margin-top: 20px;
+    background: none !important;
+    border: none;    
+    font-weight: bold;
+}.center {
+    max-width: 280px;
+    margin: 0 auto;
+}
